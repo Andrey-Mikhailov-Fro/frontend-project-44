@@ -6,7 +6,7 @@ export default (questions, correctAnswers) => {
     console.log(`Question: ${questions[i]}`);
     const answer = readlineSync.question('Your answer: ');
 
-    const correct = correctAnswers[i];
+    const correct = `${correctAnswers[i]}`;
 
     if (correct === answer) {
       console.log('Correct!');
