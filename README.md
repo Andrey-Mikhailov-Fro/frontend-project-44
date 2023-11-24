@@ -4,3 +4,6 @@
 
 ### Brain-even instalation and process:
 https://asciinema.org/a/jX3NiAxSHeyHflYBYJmpoa6yP
+
+### Brain-calc in process:
+https://asciinema.org/a/nT2I3ccwDDH6qP6w4KaRHdRq6
