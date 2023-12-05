@@ -1,7 +1,8 @@
-import getRandomIntInclusive from '../src/random.js';
+import getRandomIntInclusive from '../random.js';
+import play from '../structure.js';
 
-export default () => {
-  console.log('What is the result of the expression?');
+const calcGame = () => {
+  const quest = 'What is the result of the expression?';
 
   const questions = [];
   const correctAnswers = [];
@@ -23,5 +24,10 @@ export default () => {
     }
   }
 
-  return [questions, correctAnswers];
+  return [questions, correctAnswers, quest];
+};
+
+export default () => {
+  const [questions, correctAnswers, quest] = calcGame();
+  play(questions, correctAnswers, quest);
 };

@@ -1,7 +1,8 @@
-import getRandomIntInclusive from '../src/random.js';
+import getRandomIntInclusive from '../random.js';
+import play from '../structure.js';
 
-export default () => {
-  console.log('What number is missing in the progression?');
+const progressionGame = () => {
+  const quest = 'What number is missing in the progression?';
 
   const questions = [[], [], []];
   const correctAnswers = [];
@@ -20,5 +21,10 @@ export default () => {
     correctAnswers[i] = chosenAnswer;
   }
 
-  return [questions, correctAnswers];
+  return [questions, correctAnswers, quest];
+};
+
+export default () => {
+  const [questions, correctAnswers, quest] = progressionGame();
+  play(questions, correctAnswers, quest);
 };

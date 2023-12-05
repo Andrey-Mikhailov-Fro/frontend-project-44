@@ -1,7 +1,8 @@
-import getRandomIntInclusive from '../src/random.js';
+import getRandomIntInclusive from '../random.js';
+import play from '../structure.js';
 
-export default () => {
-  console.log('Answer "yes" if the number is prime. Otherwise answer "no".');
+const primeGame = () => {
+  const quest = 'Answer "yes" if the number is prime. Otherwise answer "no".';
 
   const questions = [];
   const correctAnswers = [];
@@ -20,5 +21,10 @@ export default () => {
     correctAnswers[i] = isPrime(questions[i]) ? 'yes' : 'no';
   }
 
-  return [questions, correctAnswers];
+  return [questions, correctAnswers, quest];
+};
+
+export default () => {
+  const [questions, correctAnswers, quest] = primeGame();
+  play(questions, correctAnswers, quest);
 };
