@@ -31,8 +31,8 @@ export default (questions, correctAnswers, quest) => {
   const result = gameplay(questions, correctAnswers);
 
   if (result === true) {
-    console.log(`Congratulations, ${yourName}`);
+    console.log(`Congratulations, ${yourName}!`);
   } else {
-    console.log(`Let's try again, ${yourName}`);
+    console.log(`Let's try again, ${yourName}!`);
   }
 };
