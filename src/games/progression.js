@@ -6,6 +6,7 @@ const progressionGame = () => {
 
   const questions = [[], [], []];
   const correctAnswers = [];
+  const actualQuestions = [];
 
   for (let i = 0; i < 3; i += 1) {
     let last = getRandomIntInclusive(1, 10);
@@ -19,9 +20,11 @@ const progressionGame = () => {
     const chosenAnswer = questions[i][chooseNumber];
     questions[i][chooseNumber] = '..';
     correctAnswers[i] = chosenAnswer;
+
+    actualQuestions.push(questions[i].join(' '));
   }
 
-  return [questions, correctAnswers, quest];
+  return [actualQuestions, correctAnswers, quest];
 };
 
 export default () => {
