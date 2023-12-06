@@ -2,7 +2,7 @@ import getRandomIntInclusive from '../random.js';
 import play from '../structure.js';
 
 const primeGame = () => {
-  const quest = 'Answer "yes" if the number is prime. Otherwise answer "no".';
+  const quest = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
   const questions = [];
   const correctAnswers = [];
