@@ -2,7 +2,7 @@ import _ from 'lodash';
 import getRandomIntInclusive from '../random.js';
 import play from '../structure.js';
 
-const gcd = (number1, number2) => {
+const getGcd = (number1, number2) => {
   const divisorsForNumber1 = [];
   const divisorsForNumber2 = [];
 
@@ -23,24 +23,23 @@ const gcd = (number1, number2) => {
   return maxCommonDivisor;
 };
 
-const gcdGame = () => {
+const playGcdGame = () => {
   const quest = 'Find the greatest common divisor of given numbers.';
 
-  const questions = [];
-  const correctAnswers = [];
-
-  for (let i = 0; i < 3; i += 1) {
+  const getQuestionAnswer = () => {
     const a = getRandomIntInclusive(1, 100);
     const b = getRandomIntInclusive(1, 100);
 
-    questions[i] = `${a} ${b}`;
-    correctAnswers[i] = gcd(a, b);
-  }
+    const questions = `${a} ${b}`;
+    const correctAnswers = getGcd(a, b);
 
-  return [questions, correctAnswers, quest];
+    return [questions, correctAnswers];
+  };
+
+  return [getQuestionAnswer, quest];
 };
 
 export default () => {
-  const [questions, correctAnswers, quest] = gcdGame();
-  play(questions, correctAnswers, quest);
+  const [getQuestionAnswer, quest] = playGcdGame();
+  play(getQuestionAnswer, quest);
 };
