@@ -2,7 +2,7 @@
   "name": "@hexlet/code",
   "version": "1.0.0",
   "type": "module",
-  "description": "[![Actions Status](https://github.com/Andrey-Mikhailov-Fro/frontend-project-44/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/Andrey-Mikhailov-Fro/frontend-project-44/actions) Hello, Friend! There are some simple games to give your brain some feed ;). Enjoy and keep your brain trained!",
+  "description": "[![Actions Status](https://github.com/Andrey-Mikhailov-Fro/frontend-project-44/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/Andrey-Mikhailov-Fro/frontend-project-44/actions) Hello, Friend! There are some simple games to give your brain some feed and test your math skills ;). README.md contain instructions how to install and play the game. Enjoy and keep your brain trained!",
   "main": "index.js",
   "bin": {
     "brain-games": "bin/brain-games.js",
